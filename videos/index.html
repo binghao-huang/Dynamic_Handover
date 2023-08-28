@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Dynamic Handover">
+  <meta name="author"
+    content="Binghao Huang, Yuanpei Chen, Tianyu Wang, Yuzhe Qin, Yaodong Yang, Nikolay Atanasov, Xiaolong Wang">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dynamic Handover</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  </nav>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-2 publication-title">Dynamic Handover: <br> Throw and Catch with Bimanual Hands</h1>
+            <div class="is-size-5 publication-authors">
+
+              <span class="author-block">
+                <a href="https://binghao-huang.github.io/">Binghao Huang</a><sup>*,1</sup>,</span>
+              <span class="author-block">
+                <a href="https://cypypccpy.github.io/">Yuanpei Chen</a><sup>*,2</sup>,</span>
+              <span class="author-block">
+                <a href="https://wangtianyu61.github.io/">Tianyu Wang</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://yzqin.github.io/">Yuzhe Qin</a><sup>1</sup>,</span><br>
+              <span class="author-block">
+                <a href="https://www.yangyaodong.com/">Yaodong Yang</a><sup>2</sup>,</span> 
+              <span class="author-block">
+                <a href="https://natanaso.github.io/">Nikolay Atanasov</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://xiaolonw.github.io/">Xiaolong Wang</a><sup>1</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>UC San Diego,</span>
+              <span class="author-block"><sup>2</sup>Peking University</span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>*</sup>Equal Contribution</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-twitter"></i>
+                    </span>
+                    <span>Twitter</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (Coming Soon)</span>
+                  </a>
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <section class="additional comment"> -->
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-4">
+            Our Multi-Agent System: high-speed actions, precise collaboration, diverse object interactions!</h2>
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-full-width">
+              <h3 class="title is-4"></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <section class="overall teaser">
+      <div class="container">
+        <div class="hero-body">
+          <video id="teaser_video" width=99% muted autoplay loop style="border-radius:10px; ">
+            <source src="static/videos/pitch2~1.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="container">
+        <div class="hero-body">
+          <video id="teaser_video" width=49.5% muted autoplay loop style="border-radius:10px; ">
+            <source src="static/videos/stra2~1.mp4" type="video/mp4">
+          </video>
+          <video id="teaser_video" width=49.5% muted autoplay loop style="border-radius:10px; ">
+            <source src="static/videos/lemon2~1.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Humans throw and catch objects all the time. However, such a seemingly common skill introduces a lot of
+                challenges for robots to achieve: The robots need to operate such dynamic actions at high-speed,
+                collaborate precisely, and interact with diverse objects. In this paper, we design a system with two
+                multi-finger hands attached to robot arms to solve this problem. We train our system using Multi-Agent
+                Reinforcement Learning in simulation and perform Sim2Real transfer to deploy on the real robots. To
+                overcome the Sim2Real gap, we provide multiple novel algorithm designs including learning a trajectory
+                prediction model for the object. Such a model can help the robot catcher has a real-time estimation of
+                where the object will be heading, and then react accordingly. We conduct our experiments with multiple
+                objects in the real-world system, and show significant improvements over multiple baselines.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--/ Abstract. -->
+
+        <!-- Paper video. -->
+        <!-- <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Video</h2>
+            <div class="publication-video">
+              <iframe src="https://www.youtube.com/watch?v=qknWKykDalE" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
+            </div>
+
+          </div>
+        </div> -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Video</h2>
+            <div class="publication-video">
+              <iframe src="https://www.youtube.com/embed/qknWKykDalE" frameborder="0"
+                      allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section">
+      <div class="container">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Bimanual dexterous Hands System</h2>
+
+          </div>
+        </div>
+        <div class="container" , align="center" style="margin-top: -12px; margin-bottom: 32px">
+          <img src="static/figure/pipeline.png" style="width: 100%;" alt="">
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            <b>Real Robot System:</b> We employ two Allegro Hands, each individually mounted on separate XArm-6
+            robots, arranged in a face-to-face configuration. We incorporate a RealSense D435 camera for
+            real-time object position tracking, which is oriented towards the working space.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="section">
+      <div class="container">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Learning NVM via Self-Supervision</h2>
+            <div class="content has-text-justified">
+              <p>
+                Although the behavior cloning objective is sufficient in producing a good policy, being equivariant to
+                translation and rotation automatically offers a standalone, self-supervised learning objective just for
+                the neural volumetric memory.</p>
+            </div>
+          </div>
+        </div>
+        <div class="container" , align="center" style="margin-top: -12px; margin-bottom: 32px">
+          <img src="figures/SSL_ge.png" style="width: 50%;" alt="">
+        </div>
+      </div>
+    </section> -->
+
+    <section class="videos">
+      <div class="container">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Visualization in the Real World</h2>
+            <!-- <div class="columns is-centered has-text-centered">
+              <div class="column is-full-width">
+                <h3 class="title is-4">We use the same policy for all different Objects. </h3>
+              </div>
+            </div> -->
+            <!-- <div class="content has-text-justified">
+              <p>To validate our method in different real-world scenes beyond the simulation, we conduct real-world
+                experiments in both indoor scenarios with stepping stones and in-the-wild scenarios.</p>
+            </div> -->
+          </div>
+        </div>
+
+        <!-- <div class="columns is-centered has-text-centered">
+          <p></p>
+          <h2 class="title is-4">Our NVM agent in different real-world scenarios</h2>
+        </div> -->
+
+        <!-- <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <h2 class="title is-5">Stairs with Obstacles</h2>
+            <div class="columns is-centered">
+              <div class="column content">
+                <video playsinline="" autoplay="" loop="" preload="" muted="" width="99%" style="border-radius:10px; ">
+                  <source src="videos/demos/compressed_2/NVM-real-syn-merged-video-stairs.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-4">Tests on Basic Geometric Objects</h2>
+          </div>
+        </div>
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <!-- <h2 class="title is-5"> Moving Objects </h2> -->
+            <div class="columns is-centered">
+              <div class="column content">
+                <video playsinline="" autoplay="" loop="" preload="" muted="" width="100%" style="border-radius:10px; ">
+                  <source src="static/videos/ball~1.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <!-- <h2 class="title is-5">Curvy Stairs</h2> -->
+            <div class="columns is-centered">
+              <div class="column content">
+                <video playsinline="" autoplay="" loop="" preload="" muted="" width="100%" style="border-radius:10px; ">
+                  <source src="static/videos/ball2~1.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <!-- <h2 class="title is-5">Rugged Terrain</h2> -->
+            <div class="columns is-centered">
+              <div class="column content">
+                <video playsinline="" autoplay="" loop="" preload="" muted="" width="100%" style="border-radius:10px; ">
+                  <source src="static/videos/cld1~1.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <!-- <h2 class="title is-5">Slope</h2> -->
+            <div class="columns is-centered">
+              <div class="column content">
+                <video playsinline="" autoplay="" loop="" preload="" muted="" width="100%" style="border-radius:10px; ">
+                  <source src="static/videos/triangle1~1.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-4">Tests on Real-life Objects</h2>
+          </div>
+        </div>
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <!-- <h2 class="title is-5"> Terrain </h2> -->
+            <div class="columns is-centered">
+              <div class="column content">
+                <video playsinline="" autoplay="" loop="" preload="" muted="" width="100%" style="border-radius:10px; ">
+                  <source src="static/videos/lemon1~1.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <!-- <h2 class="title is-5"> Terrain </h2> -->
+            <div class="columns is-centered">
+              <div class="column content">
+                <video playsinline="" autoplay="" loop="" preload="" muted="" width="100%" style="border-radius:10px; ">
+                  <source src="static/videos/pitch1~1.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <!-- <h2 class="title is-5"> Terrain </h2> -->
+            <div class="columns is-centered">
+              <div class="column content">
+                <video playsinline="" autoplay="" loop="" preload="" muted="" width="100%" style="border-radius:10px; ">
+                  <source src="static/videos/stra1~1.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <!-- <h2 class="title is-5"> Terrain </h2> -->
+            <div class="columns is-centered">
+              <div class="column content">
+                <video playsinline="" autoplay="" loop="" preload="" muted="" width="100%" style="border-radius:10px; ">
+                  <source src="static/videos/turtle1~1.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-4">Comparison with Baselines</h2>
+          </div>
+        </div>
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <h2 class="title is-5"> Our Multi-Agent System </h2>
+            <div class="columns is-centered">
+              <div class="column content">
+                <video playsinline="" autoplay="" loop="" preload="" muted="" width="100%" style="border-radius:10px; ">
+                  <source src="static/videos/ball2~1.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <h2 class="title is-5"> Baseline: w/o Multi-Agent and Goal Estimation </h2>
+            <div class="columns is-centered">
+              <div class="column content">
+                <video playsinline="" autoplay="" loop="" preload="" muted="" width="100%" style="border-radius:10px; ">
+                  <source src="static/videos/woboth1_1.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <h2 class="title is-5"> Our Multi-Agent System </h2>
+            <div class="columns is-centered">
+              <div class="column content">
+                <video playsinline="" autoplay="" loop="" preload="" muted="" width="100%" style="border-radius:10px; ">
+                  <source src="static/videos/triangle1~1.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <h2 class="title is-5"> Baseline: Open Loop Policy </h2>
+            <div class="columns is-centered">
+              <div class="column content">
+                <video playsinline="" autoplay="" loop="" preload="" muted="" width="100%" style="border-radius:10px; ">
+                  <source src="static/videos/openloop4_1.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-4"> Place Holder </h2>
+        <div class="content">
+          <p>Place Holder</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <h2 class="title is-5"> Our NVM </h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <video playsinline="" autoplay="" loop="" preload="" muted="" width="100%" style="border-radius:10px; ">
+              <source src="videos/" type="video/mp4"/>
+            </video>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <h2 class="title is-5"> Baseline </h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <video playsinline="" autoplay="" loop="" preload="" muted="" width="100%" style="border-radius:10px; ">
+              <source src="videos/" type="video/mp4"/>
+            </video>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+      </div>
+    </section>
+
+
+    <!-- <section class="section">
+      <div class="container">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-4">Visual reconstruction from learned decoder</h2>
+            <div class="content has-text-justified">
+              <p>
+                We visualize the synthesized visual observation in our self-supervised task. For every tuple, the first
+                image shows the robot moving in the environment, the second image is the input visual observation, the
+                third image is the synthesized visual observation using 3D feature volume and the estimated relative
+                camera. For the input visual observation, we apply extensive data augmentation to the image to improve
+                the robustness of our model.
+              </p>
+            </div>
+
+            <div class="container" , align="center" style="margin-top: -12px; margin-bottom: 2px">
+              <img src="figures/self_supervision/NVM-gif-stones-large.gif" style="width: 59.5%;" alt="">
+            </div>
+            <div class="container" , align="center" style="margin-top: 2px; margin-bottom: 2px">
+              <img src="figures/self_supervision/NVM-gif-obstacles-large.gif" style="width: 59.5%;" alt="">
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section> -->
+    <br>
+    <br>
+    <section class="videos">
+      <div class="container">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full-width">
+            <h2 class="title is-3">Visualization in Simulation</h2>
+            <p style="font-size: 18px; text-align: center">
+              *<span style="color:rgb(131, 204, 247)">Static blue object</span> represents predefined throwing goal. <span style="color:orange"> Orange object</span> represents estimated catching goal output by
+              Goal Estimator.
+            </p>
+              <!-- <div class="hero-body"> -->
+            <video id="teaser_video" width=99% muted autoplay loop style="border-radius:10px; ">
+              <source src="static/videos/sim9objects_small.mp4" type="video/mp4">
+            </video>
+
+          </div>
+
+          </div>
+        </div>
+
+
+        <!-- <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <h2 class="title is-5">Stones</h2>
+            <div class="columns is-centered">
+              <div class="column content">
+                <video playsinline="" autoplay="" loop="" preload="" muted="" width="100%" style="border-radius:10px; ">
+                  <source src="videos/simulation/stones_short.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <h2 class="title is-5">Stages</h2>
+            <div class="columns is-centered">
+              <div class="column content">
+                <video playsinline="" autoplay="" loop="" preload="" muted="" width="100%" style="border-radius:10px; ">
+                  <source src="videos/simulation/stages_short.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <h2 class="title is-5">Stairs</h2>
+            <div class="columns is-centered">
+              <div class="column content">
+                <video playsinline="" autoplay="" loop="" preload="" muted="" width="100%" style="border-radius:10px; ">
+                  <source src="videos/simulation/stairs_short.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+
+          <div class="column">
+            <h2 class="title is-5">Obstacles</h2>
+            <div class="columns is-centered">
+              <div class="column content">
+                <video playsinline="" autoplay="" loop="" preload="" muted="" width="100%" style="border-radius:10px; ">
+                  <source src="videos/simulation/obstacles_short.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+      </div>
+
+    </section>
+
+
+    <!-- <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>
+@inproceedings{
+  yang2023neural,
+  title={Neural Volumetric Memory for Visual Locomotion Control},
+  author={Ruihan Yang and Ge Yang and Xiaolong Wang},
+  booktitle={Conference on Computer Vision and Pattern Recognition 2023},
+  year={2023},
+  url={https://openreview.net/forum?id=JYyWCcmwDS}
+}</code></pre>
+      </div>
+    </section> -->
+
+
+    <footer class="footer">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This website template is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Here</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+</body>
+
+</html>
